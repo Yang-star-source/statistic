@@ -50,11 +50,11 @@ Since we have 2 different sample size for the 2 sample , we need to weight it fa
 
 $$new variance = \frac{weight_1 \times s_1^2 + weight_2 \times s_2^2}{total weight}$$
 
-$$w_1 = n_1 - 1$$
-$$w_2 = n_2 - 1$$
-$$total weight = w_1 + w_2$$
+$$df_1 = n_1 - 1$$
+$$df_2 = n_2 - 1$$
+$$df_{total} = df_1 + df_2$$
 
-$$new variance = \frac{(w_1 \times s_1^2 + w_2 \times s_2^2)}{w_1 + w_2}$$
+$$new variance = \frac{df_1 \times s_1^2 + df_2 \times s_2^2}{df_1 + df_2}$$
 
 $$S_p^2 = \frac{(n_1 - 1) \times s_1^2 + (n_2 - 1) \times s_2^2}{n_1 + n_2 - 2}$$
 
@@ -63,6 +63,16 @@ where $S_p^2$ is pooled variance. Sub $\sigma^2$ with $S_p^2$
 $$Var(\bar{x}_1 - \bar{x}_2) = \frac{S_p^2}{n_1} + \frac{S_p^2}{n_2}$$
 
 $$S_{\bar{x}_1 - \bar{x}_2} = S_p \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}$$
+
+For test statistic $t$ :
+
+$$t = \frac{(\bar{x}_1 - \bar{x}_2) - (\mu_1 - \mu_2)}{S_{\bar{x}_1 - \bar{x}_2}}$$
+with degree of freedom , df:
+
+$$df = n_1 + n_2 - 2$$
+
+If $df$ is a fraction , round it down.
+If $df$ too large , use normal distribution.
 
 ## If $\sigma_1$ and $\sigma_2$ unknown and assume $\sigma_1 \neq \sigma_2$
 
@@ -78,24 +88,8 @@ with degree of freedom , df:
 
 $$df = \frac{(\sigma_{\bar{x_1}}^2 + \sigma_{\bar{x_2}}^2)^2}{\frac{(\sigma_{\bar{x_1}}^2)^2}{n_1-1}+\frac{(\sigma_{\bar{x_2}}^2)^2}{n_2-1}}$$
 
-$$df = \frac{(\frac{s_1^2}{n_1} + \frac{s_1^2}{n_1})^2}{\frac{(\frac{s_1^2}{n_1})^2}{n_1-1}+\frac{(\frac{s_1^2}{n_1})^2}{n_2-1}}$$
+$$df = \frac{(\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2})^2}{\frac{(\frac{s_1^2}{n_1})^2}{n_1-1}+\frac{(\frac{s_2^2}{n_2})^2}{n_2-1}}$$
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if $df$ is a fraction , round it down.
 
 
