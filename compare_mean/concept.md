@@ -67,6 +67,7 @@ $$S_{\bar{x}_1 - \bar{x}_2} = S_p \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}$$
 For test statistic $t$ :
 
 $$t = \frac{(\bar{x}_1 - \bar{x}_2) - (\mu_1 - \mu_2)}{S_{\bar{x}_1 - \bar{x}_2}}$$
+
 with degree of freedom , df:
 
 $$df = n_1 + n_2 - 2$$
